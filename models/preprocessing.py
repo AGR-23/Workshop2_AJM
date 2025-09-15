@@ -19,6 +19,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
+import joblib
 
 # ==========================
 # Load dataset
@@ -99,3 +100,15 @@ def get_data():
     Returns the preprocessed training, validation, and test sets.
     """
     return X_train_processed, X_val_processed, X_test_processed, y_train, y_val, y_test
+
+# Save processed data
+joblib.dump(X_train_processed, "X_train.pkl")
+joblib.dump(X_val_processed, "X_val.pkl")
+joblib.dump(X_test_processed, "X_test.pkl")
+joblib.dump(y_train, "y_train.pkl")
+joblib.dump(y_val, "y_val.pkl")
+joblib.dump(y_test, "y_test.pkl")
+
+joblib.dump(pipeline, "preprocessing_pipeline.pkl")
+
+print("Data preprocessing completed. Files saved as .pkl")
