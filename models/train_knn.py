@@ -34,3 +34,6 @@ test_acc  = accuracy_score(y_test, knn.predict(X_test))
 print(f"Train Accuracy: {train_acc:.4f}")
 print(f"Validation Accuracy: {val_acc:.4f}")
 print(f"Test Accuracy: {test_acc:.4f}")
+
+joblib.dump(knn, "knn_model.pkl")
+print("KNN model saved as knn_model.pkl")
