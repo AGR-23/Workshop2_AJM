@@ -111,8 +111,8 @@ print(f"Train-Test gap: {generalization_gap:.4f}")
 # ==========================
 # Save results and model
 # ==========================
-#comparative_table.to_csv("random_forest_comparative_table.csv") if needed erase the # and run the code
-joblib.dump(rf, "random_forest_final_model.pkl")
+comparative_table.to_csv("random_forest_comparative_table.csv") #if needed erase the # and run the code
+joblib.dump(rf, "random_forest_model.pkl")
 
-#print("\n✅ Comparative table: random_forest_comparative_table.csv")
+print("\n✅ Comparative table: random_forest_comparative_table.csv")
 print("✅ Trained model: random_forest_final_model.pkl")

@@ -44,7 +44,7 @@ y_test_dnn = np.array([label_map[y] for y in y_test])
 # ==========================
 models = {
     "KNN": joblib.load("knn_model.pkl"),
-    "Random Forest": joblib.load("random_forest_final_model.pkl"),
+    "Random Forest": joblib.load("random_forest_model.pkl"),
     "Gradient Boosting": joblib.load("gb_model.pkl"),
     "Logistic Regression": joblib.load("logreg_best.pkl"),
     "DNN": load_model("dnn_model.h5")
